@@ -1,20 +1,21 @@
 
 * BEGINNER SPRING BOOT PROJECT STRUCTURE
-src
- └── main
-     ├── java
-     │    └── com.example.project
-     │          ├── controller
-     │          ├── service
-     │          ├── repository
-     │          ├── model      (or entity)
-     │          ├── dto
-     │          └── ProjectApplication.java
-     │
-     └── resources
-          ├── application.properties
-          ├── static/
-          └── templates/
+src/
+ └── main/
+      ├── java/
+      │     └── com.example.project/
+      │            ├── controller/     - Handles API endpoints (GET/POST/etc.)
+      │            ├── service/        - Business logic
+      │            ├── repository/     - Database access (JPA)
+      │            ├── entity/         - Database models (JPA entities)
+      │            ├── dto/            - Request/response objects
+      │            ├── exception/      - Error handling
+      │            └── ProjectApplication.java   - Main app starter
+      │
+      └── resources/
+            ├── application.properties - App configuration
+            ├── static/                - Static files (optional)
+            └── templates/             - View templates (optional)
 
 * PROFESSIONAL SPRING BOOT STRUCTURE
 src
@@ -53,7 +54,7 @@ This is perfect for:
 
 
 
-FOLDER EXPLAINATIONS.
+Detailed FOLDER EXPLAINATIONS.
 
 • controller/
   - Handles HTTP requests (GET, POST, PUT, DELETE).
