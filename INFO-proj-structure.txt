@@ -1,0 +1,109 @@
+
+* BEGINNER SPRING BOOT PROJECT STRUCTURE
+src
+ └── main
+     ├── java
+     │    └── com.example.project
+     │          ├── controller
+     │          ├── service
+     │          ├── repository
+     │          ├── model      (or entity)
+     │          ├── dto
+     │          └── ProjectApplication.java
+     │
+     └── resources
+          ├── application.properties
+          ├── static/
+          └── templates/
+
+* PROFESSIONAL SPRING BOOT STRUCTURE
+src
+ └── main
+     ├── java
+     │    └── com.example.project
+     │          ├── config
+     │          ├── controller
+     │          ├── service
+     │          │      ├── impl
+     │          ├── repository
+     │          ├── entity
+     │          ├── dto
+     │          ├── mapper
+     │          ├── exception
+     │          ├── util
+     │          └── ProjectApplication.java
+     │
+     └── resources
+          ├── application.properties (or application.yml)
+          ├── static/
+          └── templates/
+Info:
+ - Configurations stay in 'config/'
+ - Business logic isolated in 'service/'
+ - Implementation hidden inside 'service/impl/'
+ - DTO → Entity converters in 'mapper/'
+ - Centralized error handling in 'exception/'
+ - Reusable helpers in 'util/'
+
+This is perfect for:
+ - E-commerce
+ - Booking systems
+ - Auth systems
+ - Production-level REST APIs
+
+
+
+FOLDER EXPLAINATIONS.
+
+• controller/
+  - Handles HTTP requests (GET, POST, PUT, DELETE).
+  - Accepts input from clients (frontend, mobile apps, Postman).
+  - Calls service layer.
+  - Returns responses (DTOs or JSON).
+
+• service/
+  - Contains business logic.
+  - Processes data before saving or returning.
+  - Interfaces for clear separation of logic.
+
+• service/impl/
+  - Implementations of the service interfaces.
+  - Keeps logic organized and testable.
+
+• repository/
+  - Database access layer using Spring Data JPA.
+  - Contains interfaces like UserRepository, ProductRepository.
+  - Automatically provides CRUD methods.
+
+• entity/
+  - JPA Entities mapped to database tables.
+  - Includes fields, annotations (@Entity, @Id, @GeneratedValue).
+  - Represents your actual data model.
+
+• dto/
+  - Data Transfer Objects.
+  - Used for request and response payloads.
+  - Keeps API models separate from database models.
+
+• mapper/
+  - Maps Entity ↔ DTO (manual or via MapStruct).
+  - Helps keep code clean and avoids repetition.
+
+• exception/
+  - Custom exceptions.
+  - Global exception handling with @ControllerAdvice.
+  - Clean and consistent error responses.
+
+• config/
+  - Configuration classes for the application.
+  - CORS setup, security setup, Swagger config, beans, etc.
+
+• util/
+  - Helper or utility classes.
+  - Reusable functions like token utilities, date helpers, etc.
+
+• resources/
+  - Contains application.properties or application.yml.
+  - Static files (images, CSS, JS).
+  - Templates (for Thymeleaf).
+  - DB schema/data files (optional).
