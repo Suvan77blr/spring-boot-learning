@@ -12,6 +12,7 @@ public class EmptyProjApplication {
 
         Dev obj = ioc.getBean(Dev.class);
         System.out.println(obj.greetUser());
+        obj.build();
 
 	}
 
