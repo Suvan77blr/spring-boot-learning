@@ -35,4 +35,30 @@ public class ProductService {
         products.add(product);
         return "Product " + product.getProdId() + " added successfully!";
     }
+
+    public int updateProduct(Product prod) {
+        int idx = getProductIdx(prod.getProdId());
+        if(idx != -1) {
+            products.set(idx, prod);
+            return 0;
+        }
+        return 1;
+    }
+
+    public int deleteProduct(int prodId) {
+        int idx = getProductIdx(prodId);
+        if(idx == -1) return 1;
+
+        products.remove(idx);
+        return 0;
+    }
+
+    private int getProductIdx(int keyProdId) {
+        for(int i=0; i<products.size(); i++) {
+            if(products.get(i).getProdId() == keyProdId) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
