@@ -1,0 +1,21 @@
+<project-name>/
+ ├── src/                       # Source code
+ │    └── main/
+ │         ├── java/
+ │         │    └── com.example.project/
+ │         │         ├── controller/
+ │         │         ├── service/
+ │         │         ├── repository/
+ │         │         ├── entity/
+ │         │         ├── dto/           (optional for simple projects)
+ │         │         ├── exception/     (optional)
+ │         │         └── ProjectApplication.java  # Main Spring Boot class
+ │         │
+ │         └── resources/
+ │              ├── application.properties OR application.yml
+ │              ├── static/               (optional, for web content)
+ │              └── templates/            (optional, if using Thymeleaf)
+ │
+ ├── pom.xml OR build.gradle       # Project build file (Maven or Gradle)
+ ├── .gitignore                   # Prevent unnecessary files from going to Git
+ └── README.md                     # Optional but recommended
