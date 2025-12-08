@@ -1,0 +1,29 @@
+#spring:
+#  application:
+#    name: MyBookCRUD
+#
+#  datasource:
+#    url: jdbc:h2:mem:BookCRUD_DB
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password:
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2-console
+#
+##  datasource:
+##    url: jdbc:mysql://localhost:3600/BookCRUD_DB
+##    driver-class-name: com.mysql.cj.jdbc.Driver
+##    username: root
+##    password:
+#
+#logging:
+#  level:
+#    com:
+#      zaxxer:
+#        hikari: DEBUG
