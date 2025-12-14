@@ -95,3 +95,7 @@ tmp/
 # Generated
 bin/
 out/
+
+
+data/
+*.mv.db
